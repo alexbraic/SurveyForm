@@ -1,3 +1,27 @@
-p {
-	color: green;
+body, html{
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+h1{text-align: center;}
+p{text-align:center;}
+body{
+  background: cyan;
+  display: table-cell;
+  vertical-align: middle;
+}
+#form-holder{
+  display: table;
+  margin: auto;
+}
+.input-shape{
+  width: 450px;
+  height: 30px;
+  border-radius: 7px;
+}
+label{
+  font-size: 17px;
+  font-weight: 900;
 }
