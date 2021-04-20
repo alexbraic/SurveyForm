@@ -20,7 +20,16 @@ body{
   width: 450px;
   height: 30px;
   border-radius: 7px;
+  border-size: 5px;
 }
+.role-input-shape{
+  width: 458px;
+  height: 37px;
+  border-radius: 7px;
+  border-width: 2px;
+  margin-bottom: 20px;
+}
+
 label{
   font-size: 17px;
   font-weight: 900;
