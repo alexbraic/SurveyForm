@@ -3,59 +3,61 @@
 <head>
 	<title>Survey Form</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </head>
 <body>
 	<main>
-	  <header class="header">
-	    <h1 id="title">SurveyForm</h1>
-	    <p id="description">Thank you for taking the time to help us improve the platform</p>
-	  </header>
-	  <div id="form-holder">
-	    <form action="#" id="survey-form">
-	      <!--Name entry -->
-	      <div class="option-boxes">
-	        <label id="name-label" for="name">Name</label><br>
-	        <input 
-	               type="text"
-	               name="name" 
-	               id="name"
-	               class="input-shape"
-	               placeholder=" Enter your name" 
-	               required
-	               /><br><br>
-	      </div>
-	      <!--Email entry -->
-	      <div class="option-boxes">
-	        <label id="email-label" for="email">Email</label><br>
-	        <input 
-	              type="email"
-	              name="email"
-	              id="email"
-	              class="input-shape"
-	              placeholder=" Enter your Email"
-	              required
-	              /><br><br>
-	      </div>
-	      <!--Age entry -->
-	      <div class="option-boxes">
-	        <label for="number-label">Age(optional)</label><br>
-	        <input 
-	              type="number" 
-	              id="number"
-	              name="email"
-	              placeholder=" Age"
-	              min="18" max="99"
-	              class="input-shape"
-	              /><br><br>
-	      </div>
-	      <!--Role choice -->
-	      <div class="option-boxes">
-	        <label for="email">Which option best describes your current role? </label><br>
-	        <div>
-	          <select id="" name="" class="role-input-shape" placeholder="Select Current Role">
-	            <option value="select-role">Select Current Role</option>
+	  <div id="wrapper">
+	    <header class="header">
+	      <h1 id="title">Survey Form</h1>
+	      <p id="description">Thank you for taking the time to help us improve the platform</p>
+	    </header>
+	    <div id="form-holder">
+	      <form action="#" id="survey-form">
+	        <!--Name entry -->
+	        <div class="option-boxes">
+	          <label id="name-label" for="name">Name</label>
+	          <input 
+	                 type="text"
+	                 name="name" 
+	                 id="name"
+	                 class="input-shape"
+	                 placeholder=" Enter your name" 
+	                 required
+	                 />
+	        </div>
+	        <!--Email entry -->
+	        <div class="option-boxes">
+	          <label id="email-label" for="email">Email</label>
+	          <input 
+	                type="email"
+	                name="email"
+	                id="email"
+	                class="input-shape"
+	                placeholder=" Enter your Email"
+	                required
+	                />
+	        </div>
+	        <!--Age entry -->
+	        <div class="option-boxes">
+	          <label id="number-label" for="number">Age<span id="age-span">(optional)</span></label>
+	          <input 
+	                type="number" 
+	                id="number"
+	                name="email"
+	                placeholder=" Age"
+	                min="18" max="99"
+	                class="input-shape"
+	                />
+	        </div>
+	        <!--Role choice -->
+	          
+	        <div class="form-group">
+	          <p>Which option best describes your current role?</p>
+	          <select id="dropdown" name="job-role" class="role-input-shape" placeholder="Select Current Role">
+	            <option disabled selected value>Select Current Role</option>
 	            <option value="student">Student</option>
 	            <option value="full-time">Full Time Job</option>
 	            <option value="learner">Full Time Learner</option>
@@ -63,17 +65,103 @@
 	            <option value="other-role">Other</option>
 	          </select>
 	        </div>
-	      </div>
-	      <!--recommend question -->
-	      <div>
-	        <label for="email">Would you recommend freeCodeCamp to a friend?</label><br>
-	        <input type="radio" id="email" name="email"><br>
-	          <label for=""></label>
-	        <input type="radio" id="email" name="email"><br>
-	        <input type="radio" id="email" name="email"><br>
-	      </div>
-	      
-	    </form>
+	        <!--recommend question -->
+	        <div class="form-group">
+	          <p>Would you recommend freeCodeCamp to a friend?</p>
+	          <label>
+	            <input class="recommend-button"
+	                 type="radio"
+	                 name="user-recommend"
+	                 value="definitely">Definitely</label>
+	          <label>
+	            <input class="recommend-button"
+	                 type="radio"
+	                 name="user-recommend"
+	                 value="maybe">Maybe</label>
+	          <label>
+	            <input class="recommend-button"
+	                 type="radio"
+	                 name="user-recommend"
+	                 value="not-sure">Not sure</label>
+	        </div>
+	        <!--favourite feature -->
+	        <div class="form-group">
+	          <p>What is your favourite feature of freeCodeCamp</p>
+	          <select class="role-input-shape" required>
+	            <option disabled selected value>Select An Option</option>
+	            <option value="challenges">Challenges</option>
+	            <option value="projects">Projects</option>
+	            <option value="community">Community</option>
+	            <option value="open-source">Open Source</option>
+	          </select>
+	        </div>
+	        <div class="form-group">
+	          <p>What would you like to see improved?<span>(check all that apply)</span></p>
+	          <label>
+	            <input name="prefer"
+	                 type="checkbox"
+	                 value="front-end-projects"
+	                 class="improve-values">Front-End Projects</label>
+	          <label>
+	            <input name="prefer"
+	                 type="checkbox"
+	                 value="back-end-projects"
+	                 class="improve-values">Back-End Projects</label>
+	          <label>
+	            <input name="prefer"
+	                 type="checkbox"
+	                 value="data-visualization"
+	                 class="improve-values">Data Visualization</label>
+	          <label>
+	            <input name="prefer"
+	                 type="checkbox"
+	                 value="challenges"
+	                 class="improve-values">Challenges</label>
+	          <label>
+	            <input name="prefer"
+	                 type="checkbox"
+	                 value="open-source-community"
+	                 class="improve-values">Open Source Community</label>
+	          <label>
+	            <input name="prefer"
+	                 type="checkbox"
+	                 value="gitter-help-rooms"
+	                 class="improve-values">Gitter help rooms</label>
+	          <label>
+	            <input name="prefer"
+	                 type="checkbox"
+	                 value="videos"
+	                 class="improve-values">Videos</label>
+	          <label>
+	            <input name="prefer"
+	                 type="checkbox"
+	                 value="city-meetups"
+	                 class="improve-values">City meetups</label>
+	          <label>
+	            <input name="prefer"
+	                 type="checkbox"
+	                 value="wiki"
+	                 class="improve-values">Wiki</label>
+	          <label>
+	            <input name="prefer"
+	                 type="checkbox"
+	                 value="forum"
+	                 class="improve-values">Forum</label>
+	          <label>
+	            <input name="prefer"
+	                 type="checkbox"
+	                 value="additional-courses"
+	                 class="improve-values">Additional courses</label>
+	        </div>
+	        <div class="form-group">
+	          <label for="comments">Any comments or suggestions</label>
+	          <textarea id="comments" name="comment-section"></textarea>
+	        </div>
+	        <div class="form-group">
+	          <button type="submit" id="submit">Submit</button>
+	        </div>
+	      </form>
+	    </div>
 	  </div>
 	</main>
 </body>
